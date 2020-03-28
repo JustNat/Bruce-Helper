@@ -37,7 +37,7 @@ client.on(stringArray[2], message => {
     }
     else if (message.content === ".eibot") {
         const attachment = new MessageAttachment('https://imgur.com/KiM3ZnV.png');
-        message.channel.send(attachment)
+        message.channel.send(attachment);
     }
     // GEMIDOES
     else if (message.content === "-play gemidao estourado") {
@@ -48,6 +48,10 @@ client.on(stringArray[2], message => {
     }
     else if (message.content === "-play gemidão estourado") {
         message.channel.send(`OLHA O POMBÂO DO ${message.author} BOTANDO O GEMIDÃO`);
+    }
+    else if (message.content.startsWith('.play')) {
+        const willsmith = new MessageAttachment('https://imgur.com/itxe78j.png');
+        message.channel.send(willsmith);
     }
     //data de criação de um determinado canal 
     // informacao
