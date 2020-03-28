@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-const { Client, MessageEmbed} = require("discord.js");
+const { Client, MessageEmbed, MessageAttachment, MessageManager, MessageMentions, MessageReaction, MessageCollector, MessageFlags, VoiceBroadcast} = require("discord.js");
 
 const client = new Discord.Client();
 
@@ -23,13 +23,21 @@ client.on(stringArray[2], message => {
         message.channel.send('PONG, hahahahahahaahahaha');
     }
     else if (message.contains === "bang") {
-        message.reply('')
+        message.reply('BONG!')
     }
     else if (message.content === ".gay") {
-        message.channel.send(`Esse aí é o ${message.author}!`);
+        message.channel.send(`Gay mesmo só ${message.author}, mas olha as vantagens aí.`)
+        message.channel.send(';;play o lado bom de ser gay');
     }
     else if (message.content === ".pombao") {
-        message.channel.send(`Esse aí é o ${message.author}`);
+        message.channel.send(`Só se for o ${message.author}!`);
+    }
+    else if (message.content === ".avatar") {
+        message.channel.send(`Seu avatar é ${message.author.displayAvatarURL()}`);
+    }
+    else if (message.content === ".eibot") {
+        const attachment = new MessageAttachment('https://imgur.com/KiM3ZnV.png');
+        message.channel.send(attachment)
     }
     // GEMIDOES
     else if (message.content === "-play gemidao estourado") {
@@ -38,6 +46,10 @@ client.on(stringArray[2], message => {
     else if (message.content === "-PLAY GEMIDAO ESTOURADO") {
         message.channel.send(`OLHA O POMBÂO DO ${message.author} BOTANDO O GEMIDÃO`);
     }
+    else if (message.content === "-play gemidão estourado") {
+        message.channel.send(`OLHA O POMBÂO DO ${message.author} BOTANDO O GEMIDÃO`);
+    }
+    //data de criação de um determinado canal 
     // informacao
     
     // mensagem embutida aí, faz o teste pra lembar oq é
@@ -55,7 +67,7 @@ client.on(stringArray[2], message => {
             const member = message.guild.member(user);
             if (member) {
                 member
-                    .kick('Sei não em man')
+                    .kick('Sei não man')
                     .then(() => {
                         message.reply(`${user.tag} kickado com sucesso`);
                     })
@@ -95,6 +107,10 @@ client.on(stringArray[2], message => {
     
 
 });
+
+//broadcast
+
+
 
 // CRIANDO AS BOAS VINDAS
 
