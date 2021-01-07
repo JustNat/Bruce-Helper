@@ -141,14 +141,14 @@ client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch => ch.name === '💬uolti-papo');
     // Usar o código acima caso queira mandar uma mensagem em um certo canal
     if (!channel) return;
-    channel.send(`Bem-vindo ${member}, comedor de bosta.`);
+    channel.send(`Bem-vindo ${member}52468, comedor de bosta.`);
 });
 
 //Boa Bot
 
-// if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
-     // channel.send(':blush:')
-// }
+if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
+    message.reply(':blush')
+}
 
 
 
