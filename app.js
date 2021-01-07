@@ -36,15 +36,11 @@ client.on(stringArray[2], message => {
         message.channel.send(attachment);
     }
     // GEMIDOES
-    else if (message.content === "-play gemidao estourado") {
+    else if (message.content.toLowerCase() === "-play gemidao estourado") {
         message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
     }
-    else if (message.content === "-PLAY GEMIDAO ESTOURADO") {
-        message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
-    }
-    else if (message.content === "-play gemidão estourado") {
-        message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
-    }
+    else if (message.content.toLowerCase() === "-play gemidão estourado") {
+        message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);}
     else if (message.content.startsWith('.play')) {
         const willsmith = new MessageAttachment('https://imgur.com/itxe78j.png');
         message.channel.send(willsmith);
