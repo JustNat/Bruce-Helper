@@ -37,13 +37,12 @@ client.on(stringArray[2], message => {
     }
     // GEMIDOES
     else if (message.content.toLowerCase() === "-play gemidao estourado") {
+
         message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
     }
-    
     else if (message.content.toLowerCase() === "-play gemidão estourado") {
         message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
     }
-    // Não sou um BOT de música
     else if (message.content.startsWith('.play')) {
         const willsmith = new MessageAttachment('https://imgur.com/itxe78j.png');
         message.channel.send(willsmith);
