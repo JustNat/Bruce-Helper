@@ -139,5 +139,12 @@ client.on('guildMemberAdd', member => {
     channel.send(`Bem-vindo ${member}, comedor de bosta.`);
 });
 
+//Boa Bot
+
+if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
+    channel.send(':blush:')
+}
+
+
 
 client.login(token);
