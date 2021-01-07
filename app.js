@@ -113,16 +113,21 @@ client.on(stringArray[2], message => {
             message.reply(`Não.`)
         }
     }
-    else if (message.content === ".sn") {
-        const sn = Math.floor(Math.random() + 1)
-        if (sn == 1) {
+    else if (message.content.toLowerCase() === ".sn") {
+        const sn = Math.floor((Math.random()* 10) + 1)
+        if (sn % 2 == 0) {
             message.reply('Sim.')
         
         }
-        else {git 
+        else {
             message.reply('Não.')
         }
-    }   
+    }
+    else if (message.content.toLowerCase() === '.sorteio') {
+        const sorteio = Math.floor((Math.random()* 10) + 1)
+        message.reply(sorteio)
+        }
+     
 
 
     
@@ -141,9 +146,9 @@ client.on('guildMemberAdd', member => {
 
 //Boa Bot
 
-if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
-    channel.send(':blush:')
-}
+// if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
+     // channel.send(':blush:')
+// }
 
 
 
