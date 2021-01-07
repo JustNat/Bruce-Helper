@@ -31,10 +31,6 @@ client.on(stringArray[2], message => {
     else if (message.content.toLowerCase() === ".avatar") {
         message.channel.send(`Seu avatar é ${message.author.displayAvatarURL()}`);
     }
-    else if (message.content === ".eibot") {
-        const attachment = new MessageAttachment('https://imgur.com/KiM3ZnV.png');
-        message.channel.send(attachment);
-    }
     // GEMIDOES
     else if (message.content.toLowerCase() === "-play gemidao estourado") {
         message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
@@ -130,12 +126,13 @@ client.on(stringArray[2], message => {
      
 
     // Boa bot
-    else if (message.content.toLowerCase() === '.boa bot, tô gostando de ver') {
-        message.reply(':blush:')
+    else if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
+        message.channel.send(':blush:')
     }
-    
-    
-
+    // Não bot
+    else if (message.content.toLowerCase() === 'não bot, assim não') {
+        message.channel.send(':pleading_face:')
+    }
 });
 
 // Boas-vindas
