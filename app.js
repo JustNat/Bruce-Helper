@@ -129,7 +129,10 @@ client.on(stringArray[2], message => {
         }
      
 
-
+    // Boa bot
+    else if (message.content.toLowerCase() === '.boa bot, tô gostando de ver') {
+        message.reply(':blush:')
+    }
     
     
 
@@ -143,13 +146,6 @@ client.on('guildMemberAdd', member => {
     if (!channel) return;
     channel.send(`Bem-vindo ${member}52468, comedor de bosta.`);
 });
-
-//Boa Bot
-
-if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
-    message.reply(':blush')
-}
-
 
 
 client.login(token);
