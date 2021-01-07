@@ -20,14 +20,10 @@ client.on(stringArray[1], () => {
 
 client.on(stringArray[2], message => {
     if (message.content === ".ping") {
-        message.channel.send('PONG, hahahahahahaahahaha');
-    }
-    else if (message.contains === "bang") {
-        message.reply('BONG!')
+        message.channel.send('PONG.');
     }
     else if (message.content === ".gay") {
-        message.channel.send(`Gay mesmo só ${message.author}, mas olha as vantagens aí.`)
-        message.channel.send(';;play o lado bom de ser gay');
+        message.channel.send(`Gay mesmo só ${message.author}.`)
     }
     else if (message.content === ".pombao") {
         message.channel.send(`Só se for o ${message.author}!`);
@@ -41,13 +37,13 @@ client.on(stringArray[2], message => {
     }
     // GEMIDOES
     else if (message.content === "-play gemidao estourado") {
-        message.channel.send(`OLHA O POMBÂO DO ${message.author} BOTANDO O GEMIDÃO`);
+        message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
     }
     else if (message.content === "-PLAY GEMIDAO ESTOURADO") {
-        message.channel.send(`OLHA O POMBÂO DO ${message.author} BOTANDO O GEMIDÃO`);
+        message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
     }
     else if (message.content === "-play gemidão estourado") {
-        message.channel.send(`OLHA O POMBÂO DO ${message.author} BOTANDO O GEMIDÃO`);
+        message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
     }
     else if (message.content.startsWith('.play')) {
         const willsmith = new MessageAttachment('https://imgur.com/itxe78j.png');
@@ -65,28 +61,28 @@ client.on(stringArray[2], message => {
         message.channel.send(embed);
     }
     //kick
-    else if (message.content.startsWith('.kick')) {
-        const user = message.mentions.users.first();
-        if (user) {
-            const member = message.guild.member(user);
-            if (member) {
-                member
-                    .kick('Sei não man')
-                    .then(() => {
-                        message.reply(`${user.tag} kickado com sucesso`);
-                    })
-                    .catch(err => {
-                        message.reply('Não tô com permissão pra kickar');
-                        console.error(err);
-                    });
-            } else {
-                message.reply('O usuário não está na categoria');
-            }
-        } else {
-            message.reply('Você não mencionou quem é pra kickar, burro')
-        }
-    }
-    //tentando kickar o bot
+    //else if (message.content.startsWith('.kick')) {
+       // const user = message.mentions.users.first();
+       // if (user) {
+       //     const member = message.guild.member(user);
+        //    if (member) {
+        //        member
+        //            .kick('Sei não man')
+        //            .then(() => {
+         //               message.reply(`${user.tag} kickado com sucesso`);
+          //          })
+           //         .catch(err => {
+           //             message.reply('Não tô com permissão pra kickar');
+           //             console.error(err);
+          //          });
+          //  } else {
+          //      message.reply('O usuário não está na categoria');
+          //  }
+      //  } else {
+       //     message.reply('Você não mencionou quem é pra kickar, burro')
+      //  }
+    //}
+    // Situação de kick no bot.
     else if (message.content === `.kick ${client.user.tag}`) {
         const user = message.mentions.users.first();
         if (user) {
@@ -103,26 +99,32 @@ client.on(stringArray[2], message => {
                 });
             } 
         }  else {
-            message.reply('Deu erro man')
+            message.reply('Deu erro man.')
         } 
     }
+    else if (message.content.endsWith('é gay?')) {
+        const gay = Math.floor((Math.random()* 10) + 1)
+        if (gay % 2 == 0) {
+            message.reply(`Sim.`)
+        }
+        else {
+            message.reply(`Não.`)
+        }
+    }
+    
 
     
     
 
 });
 
-//broadcast
-
-
-
-// CRIANDO AS BOAS VINDAS
+// Boas-vindas
 
 client.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.cache.find(ch => ch.name === 'chat');
-    //USAR o código acima caso queira mandar uma mensagem em um certo canal
+    const channel = member.guild.channels.cache.find(ch => ch.name === '💬uolti-papo');
+    // Usar o código acima caso queira mandar uma mensagem em um certo canal
     if (!channel) return;
-    channel.send(`Bem-vindo ${member}, comedor de bosta`);
+    channel.send(`Bem-vindo ${member}, comedor de bosta.`);
 });
 
 

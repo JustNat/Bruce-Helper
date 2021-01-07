@@ -1,7 +1,7 @@
-ID: 691028493651148810
+ID: 796804870543900703
 
 TOKEN: NjkxMDI4NDkzNjUxMTQ4ODEw.XnaCAg.ytRjx_ywoKOqlWMu69tGQAAIRPc
 
 IMAGE:
 
-INVITE lINK: https://discordapp.com/api/oauth2/authorize?client_id=691028493651148810&scope=bot&permissions=1
+INVITE lINK: https://discordapp.com/api/oauth2/authorize?client_id=796804870543900703&scope=bot&permissions=1

@@ -14,6 +14,14 @@
   "author": "Gabriel Pereira",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.0.2"
-  }
+    "discord.js": "^12.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustNat/discord.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JustNat/discord.js/issues"
+  },
+  "homepage": "https://github.com/JustNat/discord.js#readme"
 }

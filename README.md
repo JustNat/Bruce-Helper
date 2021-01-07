@@ -1,2 +1,2 @@
 # discord.js
-MEu BOT 2
+Código de Bruce Helper, afaste-se.
