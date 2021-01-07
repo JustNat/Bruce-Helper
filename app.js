@@ -145,7 +145,7 @@ client.on('guildMemberAdd', member => {
 // if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
      // channel.send(':blush:')
 // }
-
+//
 
 
 client.login(token);
