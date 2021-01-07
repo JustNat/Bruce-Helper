@@ -102,6 +102,8 @@ client.on(stringArray[2], message => {
             message.reply('Deu erro man.')
         } 
     }
+    // Eventos Aleatórios
+    
     else if (message.content.endsWith('é gay?')) {
         const gay = Math.floor((Math.random()* 10) + 1)
         if (gay % 2 == 0) {
@@ -111,7 +113,17 @@ client.on(stringArray[2], message => {
             message.reply(`Não.`)
         }
     }
-    
+    else if (message.content === ".sn") {
+        const sn = Math.floor(Math.random() + 1)
+        if (sn == 1) {
+            message.reply('Sim.')
+        
+        }
+        else {
+            message.reply('Não.')
+        }
+    }   
+
 
     
     
