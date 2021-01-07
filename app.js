@@ -22,13 +22,13 @@ client.on(stringArray[2], message => {
     if (message.content === ".ping") {
         message.channel.send('PONG.');
     }
-    else if (message.content === ".gay") {
+    else if (message.content.toLowerCase() === ".gay") {
         message.channel.send(`Gay mesmo só ${message.author}.`)
     }
-    else if (message.content === ".pombao") {
+    else if (message.content.toLowerCase() === ".pombao") {
         message.channel.send(`Só se for o ${message.author}!`);
     }
-    else if (message.content === ".avatar") {
+    else if (message.content.toLowerCase() === ".avatar") {
         message.channel.send(`Seu avatar é ${message.author.displayAvatarURL()}`);
     }
     else if (message.content === ".eibot") {
@@ -37,16 +37,19 @@ client.on(stringArray[2], message => {
     }
     // GEMIDOES
     else if (message.content.toLowerCase() === "-play gemidao estourado") {
+
         message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
     }
     else if (message.content.toLowerCase() === "-play gemidão estourado") {
-        message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);}
+        message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
+    }
     else if (message.content.startsWith('.play')) {
         const willsmith = new MessageAttachment('https://imgur.com/itxe78j.png');
         message.channel.send(willsmith);
     }
+    
     //data de criação de um determinado canal 
-    // informacao
+    
     
     // mensagem embutida aí, faz o teste pra lembar oq é
     else if (message.content === '.embed') {
@@ -137,15 +140,15 @@ client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch => ch.name === '💬uolti-papo');
     // Usar o código acima caso queira mandar uma mensagem em um certo canal
     if (!channel) return;
-    channel.send(`Bem-vindo ${member}, comedor de bosta.`);
+    channel.send(`Bem-vindo ${member}52468, comedor de bosta.`);
 });
 
 //Boa Bot
 
-// if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
-     // channel.send(':blush:')
-// }
-//
+if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
+    message.reply(':blush')
+}
+
 
 
 client.login(token);
