@@ -119,7 +119,7 @@ client.on(stringArray[2], message => {
             message.reply('Sim.')
         
         }
-        else {
+        else {git 
             message.reply('Não.')
         }
     }   
