@@ -31,18 +31,15 @@ client.on(stringArray[2], message => {
     else if (message.content.toLowerCase() === ".avatar") {
         message.channel.send(`Seu avatar é ${message.author.displayAvatarURL()}`);
     }
-    else if (message.content === ".eibot") {
-        const attachment = new MessageAttachment('https://imgur.com/KiM3ZnV.png');
-        message.channel.send(attachment);
-    }
     // GEMIDOES
     else if (message.content.toLowerCase() === "-play gemidao estourado") {
-
         message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
     }
+    
     else if (message.content.toLowerCase() === "-play gemidão estourado") {
         message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
     }
+    // Não sou um BOT de música
     else if (message.content.startsWith('.play')) {
         const willsmith = new MessageAttachment('https://imgur.com/itxe78j.png');
         message.channel.send(willsmith);
@@ -128,10 +125,14 @@ client.on(stringArray[2], message => {
         }
      
 
-
-    
-    
-
+    // Boa bot
+    else if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
+        message.channel.send(':blush:')
+    }
+    // Não bot
+    else if (message.content.toLowerCase() === 'não bot, assim não') {
+        message.channel.send(':pleading_face:')
+    }
 });
 
 // Boas-vindas
@@ -142,13 +143,6 @@ client.on('guildMemberAdd', member => {
     if (!channel) return;
     channel.send(`Bem-vindo ${member}52468, comedor de bosta.`);
 });
-
-//Boa Bot
-
-if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
-    message.reply(':blush')
-}
-
 
 
 client.login(token);
