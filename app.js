@@ -20,7 +20,7 @@ client.on("ready", () => {
 client.on("message", message => {
 
     // . PONTO
-    if (message.content.startsWith(".")) handleDotCall(message)
+    if (message.content.startsWith(".")) handleDotCall(message, client);
     
     // GEMIDOES
     else if (message.content.startsWith("-")) handleGemidao(message)

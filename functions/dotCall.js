@@ -1,10 +1,13 @@
 const { MessageEmbed, MessageAttachment } = require('discord.js')
 
-function handleDotCall(message) {
+function handleDotCall(message, client) {
     if (message.content.toLowerCase() === '.comandos') {
         message.reply('Lembrando que o prefixo é "." \n *kick* \n *ping* \n *gay* \n *pombão* \n *avatar* \n *play* \n *embed* \n *sn* (Decidir se sim ou não) \n *sorteio* \n O comando "é gay" é utilizado marcando e digitando "é gay" no final. \n Obviamente nem todos os comandos estão prontos, então vai reclamar na casa de cacete.')
     }
-    else if (message.content === `.kick ${client.user.tag}`) {    //kick
+    else if (message.content.toLowerCase() === '.play sunflower') {
+        message.channel.send(`-play ${(message.content).split(' ')[1]}`)
+    }
+    else if (message.content.toLowerCase() === `.kick ${(client.user.tag).split('#')[0].toLowerCase()}`) {    //kick
         const user = message.mentions.users.first();
         if (user) {
             const otario = message.author(user);
