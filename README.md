@@ -9,4 +9,4 @@
 
 Participantes: Gabriel Bruce Pereira :fish:, Gabriel Guilherme :older_man:, Gabriel Fontineli :mouse2:
 
-<img src="assets/ggjacare.jpg" width="200">  
+![oi](assets/ggjacare.jpg)  
