@@ -1,7 +1,0 @@
-ID: 796804870543900703
-
-TOKEN: Nzk2ODA0ODcwNTQzOTAwNzAz.X_dQXQ.tqXXfyCk6L585JhcEhEu4xpCGoA
-
-IMAGE:
-
-INVITE lINK: https://discordapp.com/api/oauth2/authorize?client_id=796804870543900703&scope=bot&permissions=1

@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const { Client, MessageEmbed, MessageAttachment, MessageManager, MessageMentions, MessageReaction, MessageCollector, MessageFlags, VoiceBroadcast} = require("discord.js");
 
 const client = new Discord.Client();
-
+// Requerimento do Token
 const {
     token
 } = require("./tken.json");
@@ -14,10 +14,7 @@ client.on(stringArray[0], () => {
     console.log(`Estou logado como ${client.user.tag}`);
 });
 
-client.on(stringArray[1], () => {
-    console.log(`Estou reconectando como ${client.user.tag}`);
-});
-
+// Interação por meio de mensagens
 client.on(stringArray[2], message => {
     if (message.content === ".ping") {
         message.channel.send('PONG.');
@@ -44,10 +41,6 @@ client.on(stringArray[2], message => {
         const willsmith = new MessageAttachment('https://imgur.com/itxe78j.png');
         message.channel.send(willsmith);
     }
-    
-    //data de criação de um determinado canal 
-    
-    
     // mensagem embutida aí, faz o teste pra lembar oq é
     else if (message.content.toLowerCase() === '.embed') {
         const embed = new MessageEmbed()
@@ -56,29 +49,6 @@ client.on(stringArray[2], message => {
             .setDescription('Maan, sei não');
         message.channel.send(embed);
     }
-    //kick
-    //else if (message.content.startsWith('.kick')) {
-       // const user = message.mentions.users.first();
-       // if (user) {
-       //     const member = message.guild.member(user);
-        //    if (member) {
-        //        member
-        //            .kick('Sei não man')
-        //            .then(() => {
-         //               message.reply(`${user.tag} kickado com sucesso`);
-          //          })
-           //         .catch(err => {
-           //             message.reply('Não tô com permissão pra kickar');
-           //             console.error(err);
-          //          });
-          //  } else {
-          //      message.reply('O usuário não está na categoria');
-          //  }
-      //  } else {
-       //     message.reply('Você não mencionou quem é pra kickar, burro')
-      //  }
-    //}
-    // Situação de kick no bot.
     else if (message.content === `.kick ${client.user.tag}`) {
         const user = message.mentions.users.first();
         if (user) {
@@ -99,7 +69,6 @@ client.on(stringArray[2], message => {
         } 
     }
     // Eventos Aleatórios
-    
     else if (message.content.endsWith('é gay?')) {
         const gay = Math.floor((Math.random()* 10) + 1)
         if (gay % 2 == 0) {
@@ -123,8 +92,6 @@ client.on(stringArray[2], message => {
         const sorteio = Math.floor((Math.random()* 10) + 1)
         message.reply(sorteio)
         }
-     
-
     // Boa bot
     else if (message.content.toLowerCase() === 'boa bot, tô gostando de ver') {
         message.channel.send(':blush:')
