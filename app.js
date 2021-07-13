@@ -2,11 +2,11 @@ const Discord = require("discord.js");
 const { token } = require("./tken.json");
 
 //functions
-const { handleVtnc } = require('./functions/vtnc');
-const { handleDotCall } = require('./functions/dotCall');
-const { handleGemidao } = require('./functions/gemidao');
-const { handleBotInteraction } = require('./functions/botInteraction');
-const { handleQuestions } = require('./functions/questions');
+const { handleVtnc } = require('./services/vtnc');
+const { handleDotCall } = require('./services/dotCall');
+const { handleGemidao } = require('./services/gemidao');
+const { handleBotInteraction } = require('./services/botInteraction');
+const { handleQuestions } = require('./services/questions');
 
 //App start
 const client = new Discord.Client();
