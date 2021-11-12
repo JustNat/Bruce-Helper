@@ -33,6 +33,8 @@ function handleVtnc(message) {
         case 10:
             message.channel.send('gg gay')
             break
+        case 11:
+            message.channel.send('cala a boca que vc tb eh um bot arrombado do carai')
     }  
 }
 

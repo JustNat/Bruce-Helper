@@ -23,7 +23,7 @@ client.on("message", message => {
     if (message.content.startsWith(".")) handleDotCall(message, client);
 
     // GEMIDOES
-    else if (message.content.startsWith("-")) handleGemidao(message)
+    else if (message.content.includes("gemid")) handleGemidao(message)
 
     // COMANDO VAI TOMAR NO CU
     else if (message.content.endsWith('vai tomar no cu')) handleVtnc(message)
@@ -64,10 +64,9 @@ client.on('channelDelete', channel => {
   })
 // Boas-vindas
 client.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.cache.find(ch => ch.id === '582999750308134916');
+    client.channels.cache.get('582999750308134916').send(`Bem-vindo ${member}52468, comedor de bosta.`);
     // Usar o código acima caso queira mandar uma mensagem em um certo canal
-    if (!channel) return;
-    channel.send(`Bem-vindo ${member}52468, comedor de bosta.`);
+    //if (!channel) return;
 })
 
 //Login

@@ -1,11 +1,12 @@
 
 function handleGemidao(message) {
-    if (message.content.toLowerCase() === "-play gemidao estourado") {
-        message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
-    }
-    else if (message.content.toLowerCase() === "-play gemidão estourado") {
-        message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`);
-    }
+    let entry = message.content;
+    entry = entry.normalize('NFD').replace(/[\u0300-\u036f]/g, "") // tratando acentos
+    entry = entry.toLowerCase()
+
+    if(entry.includes("gemidao") )
+        
+        message.channel.send(`OLHA O POMBÃO DO ${message.author} BOTANDO O GEMIDÃO`)
 }
 
 module.exports = { handleGemidao }
