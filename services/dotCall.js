@@ -65,7 +65,7 @@ function handleDotCall(message, client) {
     }
     else if(message.content.toLowerCase().startsWith() === `.lol?`){
         var member = message.mentions.members.first();
-        if (member.activity.name.lower()=== "league of legends") 
+        if (member.activity.name.lower()=== "valorant") 
         member.kick(reason='jogando lol fdp').then((member) => {
             message.channel.send("mais um lixo sendo banido");
         })
