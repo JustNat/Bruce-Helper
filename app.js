@@ -14,7 +14,7 @@ const client = new Discord.Client();
 //Quando logado
 client.on("ready", () => {
     console.log(`Estou logado como ${client.user.tag}`);
-    client.user.setActivity('Comendo cu de Fonti')
+    client.user.setActivity("cu de Fonti", {type: 'WATCHING'});
     client.user.setStatus('dnd');
 })
 
