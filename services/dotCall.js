@@ -63,7 +63,7 @@ function handleDotCall(message, client) {
         const sorteio = Math.floor((Math.random()* 10) + 1)
         message.reply(sorteio)
     }
-    else if(message.content.toLowerCase().startsWith() === `.lol?`){
+    else if(message.content.includes() === `.lol`){
         var member = message.mentions.members.first();
         if (member.activity.name.lower() == "league of legends") 
         member.kick(reason='jogando lol fdp').then((member) => {
