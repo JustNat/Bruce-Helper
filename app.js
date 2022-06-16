@@ -1,5 +1,5 @@
-const { Client, Intents } = require("discord.js");
-const { token } = require("./tken.json");
+const { Client, Intents } = require('discord.js');
+const { token } = require('./config.json');
 
 //functions
 const { handleVtnc } = require('./services/vtnc');
@@ -23,9 +23,9 @@ const client = new Client({ intents: [
 ]});
 
 //Quando logado
-client.on("ready", () => {
+client.once('ready', () => {
     console.log(`Estou logado como ${client.user.tag}`);
-    client.user.setActivity("cu de Fonti", {type: 'WATCHING'});
+    client.user.setActivity('cu de Fonti', {type: 'WATCHING'});
     client.user.setStatus('dnd');
 })
 

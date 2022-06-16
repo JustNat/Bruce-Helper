@@ -1,7 +1,5 @@
-
 function handleBotInteraction(message) {
     let entry = message.content.toLowerCase()
-
 
     // Boa bot
     if (entry === 'boa bot, tô gostando de ver') {
